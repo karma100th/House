@@ -1,11 +1,11 @@
 public class Rectangle {
     public static void main(String[] args) {
-        int a = 1;
-        int b = 3;
+        int a = 3;
+        int b = 1;
         int c = 1;
-        int d = 1;
-        int e = 3;
-        int f = 3;
+        int d = 2;
+        int e = 1;
+        int f = 5;
         // нахожу минимальную сумму сторон прямоугольков, но главвное 2 не минмальных стороны
         int minSum = 0;
         int notMinSideAB = 0;
@@ -28,7 +28,15 @@ public class Rectangle {
             notMinSideCD = c;
         }
         //вывод результата
-        if ((minSum <= e && notMinSideAB <= f && notMinSideCD <= f) ||
+        if (((a + c) <= f && b <= e && d <= e) || ((a + c) <= e && b <= f && d <= f)){
+            System.out.println("Дома помещаются на участке");
+        } else if (((a + d) <= f && b <= e && c <= e) || ((a + d) <= e && b <= f && c <= f)){
+            System.out.println("Дома помещаются на участке");
+        } else if (((b + c) <= f && a <= e && d <= e) || ((b + c) <= e && a <= f && d <= f)){
+            System.out.println("Дома помещаются на участке");
+        } else if (((b + d) <= f && a <= e && c <= e) || ((b + d) <= e && a <= f && c <= f)){
+            System.out.println("Дома помещаются на участке");
+        }else if ((minSum <= e && notMinSideAB <= f && notMinSideCD <= f) ||
                 (minSum <= f && notMinSideAB <= e && notMinSideCD <= e)) {
             System.out.println("Дома помещаются на участке");
         } else {
