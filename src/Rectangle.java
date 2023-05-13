@@ -28,15 +28,15 @@ public class Rectangle {
             notMinSideCD = c;
         }
         //вывод результата
-        if (((a + c) <= f && b <= e && d <= e) || ((a + c) <= e && b <= f && d <= f)){
+        if (((a + c) <= f && b <= e && d <= e) || ((a + c) <= e && b <= f && d <= f)) {
             System.out.println("Дома помещаются на участке");
-        } else if (((a + d) <= f && b <= e && c <= e) || ((a + d) <= e && b <= f && c <= f)){
+        } else if (((a + d) <= f && b <= e && c <= e) || ((a + d) <= e && b <= f && c <= f)) {
             System.out.println("Дома помещаются на участке");
-        } else if (((b + c) <= f && a <= e && d <= e) || ((b + c) <= e && a <= f && d <= f)){
+        } else if (((b + c) <= f && a <= e && d <= e) || ((b + c) <= e && a <= f && d <= f)) {
             System.out.println("Дома помещаются на участке");
-        } else if (((b + d) <= f && a <= e && c <= e) || ((b + d) <= e && a <= f && c <= f)){
+        } else if (((b + d) <= f && a <= e && c <= e) || ((b + d) <= e && a <= f && c <= f)) {
             System.out.println("Дома помещаются на участке");
-        }else if ((minSum <= e && notMinSideAB <= f && notMinSideCD <= f) ||
+        } else if ((minSum <= e && notMinSideAB <= f && notMinSideCD <= f) ||
                 (minSum <= f && notMinSideAB <= e && notMinSideCD <= e)) {
             System.out.println("Дома помещаются на участке");
         } else {
